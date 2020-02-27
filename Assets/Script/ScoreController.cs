@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
-    //public GameObject popUp;
-    //public Text winLoseCondition;
+    public GameObject popUp;
+    public GameObject ball;
+    public Text winLoseCondition;
     public Text playerScoreText;
     private string playerScore;
     public Text enemyScoreText;
@@ -16,7 +17,7 @@ public class ScoreController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,17 +29,19 @@ public class ScoreController : MonoBehaviour
         playerScoreText.text = playerScore;
         enemyScoreText.text = enemyScore;
 
-        // if(PlayerAttribute.score >= maxScore)
-        // {
-        //     Time.timeScale = 0;
-        //     //winLoseCondition.text =  "You Lose!";
-        //     //popUp.SetActive(true);
+        if(PlayerAttribute.score >= maxScore)
+        {
+            Time.timeScale = 0;
+            winLoseCondition.text =  "You Lose!";
+            popUp.SetActive(true);
+            ball.SetActive(false);
             
-        // }else if(EnemyAttribute.score <= maxScore)
-        // {
-        //     Time.timeScale = 0;
-        //     //winLoseCondition.text =  "You Win!";
-        //     //popUp.SetActive(true);
-        // }
+        }else if(EnemyAttribute.score >= maxScore)
+        {
+            Time.timeScale = 0;
+            winLoseCondition.text =  "You Win!";
+            popUp.SetActive(true);
+            ball.SetActive(false);
+        }
     }
 }
