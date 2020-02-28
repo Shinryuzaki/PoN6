@@ -32,14 +32,15 @@ public class ScoreController : MonoBehaviour
         if(PlayerAttribute.score >= maxScore)
         {
             Time.timeScale = 0;
-            winLoseCondition.text =  "You Lose!";
+            winLoseCondition.text =  "You Win!";
             popUp.SetActive(true);
             ball.SetActive(false);
             
-        }else if(EnemyAttribute.score >= maxScore)
+        }
+        if(EnemyAttribute.score >= maxScore)
         {
             Time.timeScale = 0;
-            winLoseCondition.text =  "You Win!";
+            winLoseCondition.text =  "You Lose!";
             popUp.SetActive(true);
             ball.SetActive(false);
         }

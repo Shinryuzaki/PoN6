@@ -317,7 +317,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: f589328379432435ae70bf4c11687401
+      Hash: 8863050d9118606e3d5a5b8b560f5025
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreController
